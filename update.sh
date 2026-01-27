@@ -102,7 +102,7 @@ update_feeds() {
     # if grep -q "nss_packages" "$BUILD_DIR/$FEEDS_CONF"; then
     #     sed -i '/nss_packages/d' "$BUILD_DIR/$FEEDS_CONF"
     #     [ -z "$(tail -c 1 "$BUILD_DIR/$FEEDS_CONF")" ] || echo "" >>"$BUILD_DIR/$FEEDS_CONF"
-    #     echo "src-git nss_packages https://github.com/LiBwrt/nss-packages.git" >>"$BUILD_DIR/$FEEDS_CONF"
+    #     echo "src-git nss_packages https://github.com/rodren-lion/nss-packages.git" >>"$BUILD_DIR/$FEEDS_CONF"
     # fi
 
     # 更新 feeds
@@ -211,7 +211,7 @@ check_default_settings() {
         echo "在 $BUILD_DIR/package 中未找到 default-settings 目录，正在从 immortalwrt 仓库克隆..."
         local tmp_dir
         tmp_dir=$(mktemp -d)
-        if git clone --depth 1 --filter=blob:none --sparse https://github.com/immortalwrt/immortalwrt.git "$tmp_dir"; then
+        if git clone --depth 1 --filter=blob:none --sparse https://github.com/x-shark/immortalwrt.git "$tmp_dir"; then
             pushd "$tmp_dir" > /dev/null
             git sparse-checkout set package/emortal/default-settings
             # 确保目标父目录存在
