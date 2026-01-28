@@ -102,7 +102,7 @@ update_feeds() {
     # if grep -q "nss_packages" "$BUILD_DIR/$FEEDS_CONF"; then
     #     sed -i '/nss_packages/d' "$BUILD_DIR/$FEEDS_CONF"
     #     [ -z "$(tail -c 1 "$BUILD_DIR/$FEEDS_CONF")" ] || echo "" >>"$BUILD_DIR/$FEEDS_CONF"
-    #     echo "src-git nss_packages https://github.com/rodren-lion/nss-packages.git" >>"$BUILD_DIR/$FEEDS_CONF"
+    #     echo "src-git nss_packages https://github.com/LiBwrt/nss-packages.git" >>"$BUILD_DIR/$FEEDS_CONF"
     # fi
 
     # 更新 feeds
@@ -1044,7 +1044,7 @@ remove_tweaked_packages() {
 }
 
 update_argon() {
-    local repo_url="https://github.com/ZqinKing/luci-theme-argon.git"
+    local repo_url="https://github.com/ramondelee/luci-theme-argon.git"
     local dst_theme_path="$BUILD_DIR/feeds/luci/themes/luci-theme-argon"
     local tmp_dir
     tmp_dir=$(mktemp -d)
