@@ -753,7 +753,7 @@ add_timecontrol() {
 
 add_gecoosac() {
     local gecoosac_dir="$BUILD_DIR/package/openwrt-gecoosac"
-    local repo_url="https://github.com/lwb1978/openwrt-gecoosac.git"
+    local repo_url="https://github.com/zfgeng/openwrt-gecoosac.git"
     # 删除旧的目录（如果存在）
     rm -rf "$gecoosac_dir" 2>/dev/null
     echo "正在添加 openwrt-gecoosac..."
